@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="BlueOf2cs">#000080</color>
+    <color name="Orange2cs">#F69125</color>
+    <color name="variant_orange2cs">#C3F69125</color>
+    <color name="variante2_orange2cs">#85F69125</color>
+    <color name="bleu_claire">#DEEAF6</color>
+    <color name="Bleu_entete">#5B9BD5</color>
+    <color name="Orange_deteint">#FFF2CC</color>
+</resources>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/lay1"
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        android:padding="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/besoin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:height="200dp"
+            android:background="@drawable/rounded_corner"
+            android:fontFamily="@font/amaranth"
+            android:gravity="center_horizontal"
+            android:minHeight="48dp"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:text="Besoin d'un Service Intellectuel"
+            android:textColor="@color/white"
+            android:textSize="48sp"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/logo"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-16dp"
+            android:height="50dp"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/soft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-40dp"
+            android:height="150dp"
+            android:background="@drawable/softxl150"
+            android:minHeight="48dp" />
+
+        <TableLayout
+            android:id="@+id/tlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:stretchColumns="1">
+
+            <TableRow
+                android:id="@+id/newRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/newCell1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/BlueOf2cs"
+                    android:fontFamily="@font/actor"
+                    android:padding="8dp"
+                    android:text="@string/nos_services_sont_les_suivants"
+                    android:textColor="@color/bleu_claire"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/newCell2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/BlueOf2cs"
+                    android:padding="8dp"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:text="" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bleu_claire"
+                    android:fontFamily="@font/andika"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/formations_pratiques"
+                    android:textColor="@color/BlueOf2cs"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bleu_claire"
+                    android:padding="8dp"
+                    android:text="" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/Orange_deteint">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/Orange_deteint"
+                    android:fontFamily="@font/andika"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/coaching_m_moire"
+                    android:textColor="@color/BlueOf2cs"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bleu_claire">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bleu_claire"
+                    android:fontFamily="@font/andika"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/compl_ment_de_comp_tences"
+                    android:textColor="@color/BlueOf2cs"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/Orange_deteint">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/Orange_deteint"
+                    android:fontFamily="@font/andika"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/informatique_pour_tous"
+                    android:textColor="@color/BlueOf2cs"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bleu_claire">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bleu_claire"
+                    android:fontFamily="@font/andika"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/autres_prestations_intellectuelles"
+                    android:textColor="@color/BlueOf2cs"
+                    android:textSize="16sp" />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

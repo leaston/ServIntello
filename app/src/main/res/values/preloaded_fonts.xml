@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/abel</item>
+        <item>@font/actor</item>
+        <item>@font/advent_pro_thin</item>
+        <item>@font/alata</item>
+        <item>@font/alatsi</item>
+        <item>@font/amaranth</item>
+        <item>@font/amiko</item>
+        <item>@font/andika</item>
+        <item>@font/andika_new_basic</item>
+        <item>@font/capriola</item>
+        <item>@font/roboto_mono_thin</item>
+        <item>@font/roboto_thin</item>
+    </array>
+</resources>

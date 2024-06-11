@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ServIntello</string>
+    <string name="nos_services_sont_les_suivants">Nos services sont les suivants :</string>
+    <string name="formations_pratiques">- Formations pratiques</string>
+    <string name="coaching_m_moire">- Coaching Mémoire</string>
+    <string name="compl_ment_de_comp_tences">- Complément de compétences</string>
+    <string name="informatique_pour_tous">- Informatique pour tous</string>
+    <string name="autres_prestations_intellectuelles">- Autres prestations intellectuelles</string>
+    <string name="new_cell_1">New Cell 1</string>
+    <string name="new_cell_2">New Cell 2</string>
+</resources>
