@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         int paddingLeftW = (int) getResources().getDimension(R.dimen.padding_left_w);
         int paddingRightW = (int) getResources().getDimension(R.dimen.padding_right_w);
-        newCell2.setPadding(paddingLeft, 0, paddingRight, 0);
+        newCell2.setPadding(paddingLeftW, 0, paddingRightW, 0);
 
         newRow.addView(newCell2);
 
