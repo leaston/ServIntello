@@ -28,6 +28,12 @@ public class MainActivity extends AppCompatActivity {
         TableRow newRow = new TableRow(this);
         TextView newCell1 = new TextView(this);
         newCell1.setText(R.string.new_cell_1);
+
+        int paddingLeft = (int) getResources().getDimension(R.dimen.padding_left);
+        int paddingRight = (int) getResources().getDimension(R.dimen.padding_right);
+        newCell1.setPadding(paddingLeft, 0, paddingRight, 0);
+
+
         newRow.addView(newCell1);
 
         TextView newCell2 = new TextView(this);

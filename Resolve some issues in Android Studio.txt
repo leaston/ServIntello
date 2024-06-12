@@ -1,0 +1,7 @@
+How to resolve "Android Studio Duplicate property key error in gradle-wrapper.properties" : 
+
+1. Build > Clean project
+
+2. File > Sync Project with Gradle files
+
+3. File > Invalidate Cahes...

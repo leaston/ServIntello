@@ -15,7 +15,6 @@
         android:padding="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -34,14 +33,6 @@
             android:textColor="@color/white"
             android:textSize="48sp"
             tools:ignore="RtlSymmetry" />
-
-        <TextView
-            android:id="@+id/logo"
-            android:layout_width="75dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-16dp"
-            android:height="50dp"
-            android:minHeight="48dp" />
 
         <TextView
             android:id="@+id/soft"
@@ -83,9 +74,9 @@
                     android:layout_height="wrap_content"
                     android:background="@color/BlueOf2cs"
                     android:padding="8dp"
+                    android:text=""
                     android:textSize="17sp"
-                    android:textStyle="bold"
-                    android:text="" />
+                    android:textStyle="bold" />
             </TableRow>
 
             <TableRow
@@ -98,8 +89,8 @@
                     android:background="@color/bleu_claire"
                     android:fontFamily="@font/andika"
                     android:paddingStart="30dp"
-                    android:paddingEnd="30dp"
                     android:paddingTop="5dp"
+                    android:paddingEnd="30dp"
                     android:paddingBottom="5dp"
                     android:text="@string/formations_pratiques"
                     android:textColor="@color/BlueOf2cs"
@@ -125,8 +116,8 @@
                     android:background="@color/Orange_deteint"
                     android:fontFamily="@font/andika"
                     android:paddingStart="30dp"
-                    android:paddingEnd="30dp"
                     android:paddingTop="5dp"
+                    android:paddingEnd="30dp"
                     android:paddingBottom="5dp"
                     android:text="@string/coaching_m_moire"
                     android:textColor="@color/BlueOf2cs"
@@ -144,8 +135,8 @@
                     android:background="@color/bleu_claire"
                     android:fontFamily="@font/andika"
                     android:paddingStart="30dp"
-                    android:paddingEnd="30dp"
                     android:paddingTop="5dp"
+                    android:paddingEnd="30dp"
                     android:paddingBottom="5dp"
                     android:text="@string/compl_ment_de_comp_tences"
                     android:textColor="@color/BlueOf2cs"
@@ -163,8 +154,8 @@
                     android:background="@color/Orange_deteint"
                     android:fontFamily="@font/andika"
                     android:paddingStart="30dp"
-                    android:paddingEnd="30dp"
                     android:paddingTop="5dp"
+                    android:paddingEnd="30dp"
                     android:paddingBottom="5dp"
                     android:text="@string/informatique_pour_tous"
                     android:textColor="@color/BlueOf2cs"
@@ -182,8 +173,8 @@
                     android:background="@color/bleu_claire"
                     android:fontFamily="@font/andika"
                     android:paddingStart="30dp"
-                    android:paddingEnd="30dp"
                     android:paddingTop="5dp"
+                    android:paddingEnd="30dp"
                     android:paddingBottom="5dp"
                     android:text="@string/autres_prestations_intellectuelles"
                     android:textColor="@color/BlueOf2cs"
