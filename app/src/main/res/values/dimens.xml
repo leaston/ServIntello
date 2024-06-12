@@ -1,4 +1,7 @@
 <resources>
     <dimen name="padding_left">30dp</dimen>
     <dimen name="padding_right">30dp</dimen>
+
+    <dimen name="padding_left_w">10dp</dimen>
+    <dimen name="padding_right_w">20dp</dimen>
 </resources>

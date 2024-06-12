@@ -33,11 +33,15 @@ public class MainActivity extends AppCompatActivity {
         int paddingRight = (int) getResources().getDimension(R.dimen.padding_right);
         newCell1.setPadding(paddingLeft, 0, paddingRight, 0);
 
-
         newRow.addView(newCell1);
 
         TextView newCell2 = new TextView(this);
         newCell2.setText(R.string.new_cell_2);
+
+        int paddingLeftW = (int) getResources().getDimension(R.dimen.padding_left_w);
+        int paddingRightW = (int) getResources().getDimension(R.dimen.padding_right_w);
+        newCell2.setPadding(paddingLeft, 0, paddingRight, 0);
+
         newRow.addView(newCell2);
 
         tlay.addView(newRow);

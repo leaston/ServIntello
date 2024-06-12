@@ -7,6 +7,6 @@
     <string name="informatique_pour_tous">- Informatique pour tous</string>
     <string name="autres_prestations_intellectuelles">- Autres prestations intellectuelles</string>
     <string name="new_cell_1">- New Cell 1</string>
-    <string name="new_cell_2">- New Cell 2</string>
+    <string name="new_cell_2"> -> </string>
     <string name="besoin_d_un_service_intellectuel">Besoin d\'un Service Intellectuel</string>
 </resources>
