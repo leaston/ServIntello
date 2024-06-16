@@ -37,7 +37,7 @@ public class TrainingActivity extends AppCompatActivity {
         TextView ipeTextView = findViewById(R.id.ipe);
         TextView ipadoTextView = findViewById(R.id.ipado);
         TextView ipaduproTextView = findViewById(R.id.ipadupro);
-        TextView flc = findViewById(R.id.flc);
+        TextView flcTextView = findViewById(R.id.flc);
 
         gaTextView = findViewById(R.id.ga);
         startImageSwitcher();
@@ -63,6 +63,7 @@ public class TrainingActivity extends AppCompatActivity {
         // Définir la partie du texte que l'on souhaite rendre cliquable
         String clickableText = "Cliquez ici";
         int start = spannedText.toString().indexOf(clickableText);
+        // La ligne ci-dessous est à revoir plus tard
         int end = start + clickableText.length();
 
         SpannableString spannableString = new SpannableString(spannedText);
@@ -91,7 +92,7 @@ public class TrainingActivity extends AppCompatActivity {
         // Appliquer les textes interprétés avec HTML aux autres TextViews
         ipadoTextView.setText(spannedTextAdo);
         ipaduproTextView.setText(spannedTextPro);
-        flc.setText(spannedTextFlc);
+        flcTextView.setText(spannedTextFlc);
 
         // Le paramètre ViewCompat.setOnApplyWindowInsetsListener est formaté pour être plus
         // lisible et ne pas dépasser les 120 caractères par ligne.
