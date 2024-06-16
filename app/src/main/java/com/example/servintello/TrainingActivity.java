@@ -1,6 +1,7 @@
 package com.example.servintello;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Html;
@@ -9,6 +10,7 @@ import android.text.Spanned;
 import android.text.TextPaint;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
+import android.text.style.ImageSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,6 +18,7 @@ import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -37,7 +40,7 @@ public class TrainingActivity extends AppCompatActivity {
         TextView ipeTextView = findViewById(R.id.ipe);
         TextView ipadoTextView = findViewById(R.id.ipado);
         TextView ipaduproTextView = findViewById(R.id.ipadupro);
-        TextView flcTextView = findViewById(R.id.flc);
+        TextView flc = findViewById(R.id.flc);
 
         gaTextView = findViewById(R.id.ga);
         startImageSwitcher();
@@ -49,24 +52,24 @@ public class TrainingActivity extends AppCompatActivity {
 
         // La Nomenclature des variables suivantes (htmlText, htmlTextAdo, htmlTextPro, htmlTextFlc)
         // permet d'éviter des longues lignes
-        String htmlText = getString(R.string.informatique_pour_enfants);
+        String htmlTextIpe = getString(R.string.informatique_pour_enfants);
         String htmlTextAdo = getString(R.string.informatique_pour_adolescents);
         String htmlTextPro = getString(R.string.informatique_pour_adultes_et_professionnels);
         String htmlTextFlc = getString(R.string.faso_learning_code);
 
         // Interpréter les balises HTML
-        Spanned spannedText = Html.fromHtml(htmlText, Html.FROM_HTML_MODE_LEGACY);
+        Spanned spannedTextIpe = Html.fromHtml(htmlTextIpe, Html.FROM_HTML_MODE_LEGACY);
         Spanned spannedTextAdo = Html.fromHtml(htmlTextAdo, Html.FROM_HTML_MODE_LEGACY);
         Spanned spannedTextPro = Html.fromHtml(htmlTextPro, Html.FROM_HTML_MODE_LEGACY);
         Spanned spannedTextFlc = Html.fromHtml(htmlTextFlc, Html.FROM_HTML_MODE_LEGACY);
 
         // Définir la partie du texte que l'on souhaite rendre cliquable
         String clickableText = "Cliquez ici";
-        int start = spannedText.toString().indexOf(clickableText);
+        int start = spannedTextIpe.toString().indexOf(clickableText);
         // La ligne ci-dessous est à revoir plus tard
         int end = start + clickableText.length();
 
-        SpannableString spannableString = new SpannableString(spannedText);
+        SpannableString spannableString = new SpannableString(spannedTextIpe);
 
         ClickableSpan clickableSpan = new ClickableSpan() {
             @Override
@@ -90,9 +93,13 @@ public class TrainingActivity extends AppCompatActivity {
         ipeTextView.setMovementMethod(LinkMovementMethod.getInstance());
 
         // Appliquer les textes interprétés avec HTML aux autres TextViews
+        ipeTextView.setText(spannedTextIpe);
         ipadoTextView.setText(spannedTextAdo);
         ipaduproTextView.setText(spannedTextPro);
-        flcTextView.setText(spannedTextFlc);
+        flc.setText(spannedTextFlc);
+
+        // Ajouter une icône au TextView flc
+        addIconToTextView(flc, spannedTextFlc, R.drawable.ic_icon_flc);
 
         // Le paramètre ViewCompat.setOnApplyWindowInsetsListener est formaté pour être plus
         // lisible et ne pas dépasser les 120 caractères par ligne.
@@ -114,5 +121,15 @@ public class TrainingActivity extends AppCompatActivity {
             }
         };
         handler.post(runnable);
+    }
+    private void addIconToTextView(TextView textView, Spanned text, int drawableResId) {
+        SpannableString spannableString = new SpannableString(text);
+        Drawable drawable = ContextCompat.getDrawable(this, drawableResId);
+        drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
+
+        ImageSpan imageSpan = new ImageSpan(drawable, ImageSpan.ALIGN_BASELINE);
+        spannableString.setSpan(imageSpan, 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        textView.setText(spannableString);
     }
 }
