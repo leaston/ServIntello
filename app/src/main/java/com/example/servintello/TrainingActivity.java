@@ -18,7 +18,7 @@ public class TrainingActivity extends AppCompatActivity {
     private TextView gaTextView;
     private final Handler handler = new Handler();
     private int currentImageIndex = 0;
-    private final int[] images = {R.drawable.gaxl150, R.drawable.ga2xl150};
+    private final int[] images = {R.drawable.gaxl150, R.drawable.ga2xl150, R.drawable.gapdxl150, R.drawable.gapd2xl150};
     Button retour1;
     TextView ipeTextView, ipadoTextView, ipaduproTextView, flc;
 
@@ -42,6 +42,8 @@ public class TrainingActivity extends AppCompatActivity {
             startActivity(retour);
         });
 
+        // La Nomenclature des variables suivantes (htmlText, htmlTextAdo, htmlTextPro, htmlTextFlc)
+        // permet d'éviter des longues lignes
         String htmlText = getString(R.string.informatique_pour_enfants);
         String htmlTextAdo = getString(R.string.informatique_pour_adolescents);
         String htmlTextPro = getString(R.string.informatique_pour_adultes_et_professionnels);
@@ -52,6 +54,8 @@ public class TrainingActivity extends AppCompatActivity {
         ipaduproTextView.setText(Html.fromHtml(htmlTextPro, Html.FROM_HTML_MODE_LEGACY));
         flc.setText(Html.fromHtml(htmlTextFlc, Html.FROM_HTML_MODE_LEGACY));
 
+        // Le paramètre ViewCompat.setOnApplyWindowInsetsListener est formaté pour être plus
+        // lisible et ne pas dépasser les 120 caractères par ligne.
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

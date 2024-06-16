@@ -1,11 +1,8 @@
 package com.example.servintello;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TableLayout;
-import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         f3 = findViewById(R.id.f3);
         f4 = findViewById(R.id.f4);
         f5 = findViewById(R.id.f5);
-        TableLayout tlay = findViewById(R.id.tlay);
+        //TableLayout tlay = findViewById(R.id.tlay);
 
         /*/ Définir l'écouteur de clic commun
         formations.setOnClickListener(this);

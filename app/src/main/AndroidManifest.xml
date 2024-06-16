@@ -16,9 +16,6 @@
             android:name=".GaActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivityTest"
-            android:exported="false" />
-        <activity
             android:name=".AutrePiActivity"
             android:exported="false"
             android:label="@string/title_activity_autre_pi" />
