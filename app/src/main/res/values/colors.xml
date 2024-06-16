@@ -9,4 +9,10 @@
     <color name="bleu_claire">#DEEAF6</color>
     <color name="Bleu_entete">#5B9BD5</color>
     <color name="Orange_deteint">#FFF2CC</color>
+    <color name="bouton_info">#179FB5</color>
+    <color name="bouton_Secondary">#6C757D</color>
+    <color name="bouton_Succes">#28A745</color>
+    <color name="bouton_Danger">#DC3545</color>
+    <color name="bouton_Warning">#FFC107</color>
+    <color name="bouton_Dark">#343A40</color>
 </resources>

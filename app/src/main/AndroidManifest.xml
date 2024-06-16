@@ -13,6 +13,29 @@
         android:theme="@style/Theme.ServIntello"
         tools:targetApi="31">
         <activity
+            android:name=".GaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivityTest"
+            android:exported="false" />
+        <activity
+            android:name=".AutrePiActivity"
+            android:exported="false"
+            android:label="@string/title_activity_autre_pi" />
+        <activity
+            android:name=".IptActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ipt" />
+        <activity
+            android:name=".CompetencesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CoachingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TrainingActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -21,6 +44,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

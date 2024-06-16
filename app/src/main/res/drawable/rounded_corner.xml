@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <solid android:color="#FF000080"/> <!-- Couleur de fond -->
-    <corners android:radius="20dp"/> <!-- Rayon des bords arrondis -->
-    <stroke android:width="2dp" android:color="#FF000000"/> <!-- Bordure -->
+    <corners
+        android:bottomLeftRadius="0dp"
+        android:bottomRightRadius="0dp"
+        android:topLeftRadius="20dp"
+        android:topRightRadius="20dp" >
+    </corners><!-- Rayon des bords arrondis -->
+    <stroke android:width="0dp" android:color="#FFFFFFFF"/> <!-- Bordure -->
 </shape>

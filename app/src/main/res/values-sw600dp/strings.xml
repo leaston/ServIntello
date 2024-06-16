@@ -1,0 +1,5 @@
+<resources>
+    <string name="besoin_service">Besoin d\'un service intellectuel</string>
+    <string name="autres_prestations">- Autres prestations intellectuelles</string>
+    <string name="complement_prestations">- Complément de compétences qu\'il vous faut acquérir</string>
+</resources>

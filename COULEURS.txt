@@ -1,0 +1,17 @@
+Orange 2cs : #F69125
+Info : #179FB5
+Secondary : #6C757D
+Succes : #28A745
+Danger : #DC3545
+Warning : #FFC107
+Dark : #343A40
+
+https://www.youtube.com/watch?v=mU4JFLm1Ir8
+
+Chemine autres images :
+C:\Users\moses\Documents\CHARLES NKUNA\LOGOS
+
+
+
+ChatGPT :
+Peut-on insérer un bouton ou texte cliquable dans TextView qui contient déjà un autre texte ?

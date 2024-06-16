@@ -6,7 +6,35 @@
     <string name="compl_ment_de_comp_tences">- Complément de compétences</string>
     <string name="informatique_pour_tous">- Informatique pour tous</string>
     <string name="autres_prestations_intellectuelles">- Autres prestations intellectuelles</string>
-    <string name="new_cell_1">- New Cell 1</string>
     <string name="new_cell_2"> -> </string>
-    <string name="besoin_d_un_service_intellectuel">Besoin d\'un Service Intellectuel</string>
+    <string name="nos_formations">Nos Formations</string>
+    <string name="nos_coaching">Nos Coaching</string>
+    <string name="title_activity_ipt">IptActivity</string>
+    <string name="title_activity_autre_pi">AutrePiActivity</string>
+    <string name="nos_comp_tences">Nos Compétences</string>
+    <string name="d_tectons_ensemble_vos_comp_tences_compl_mentaires">Détectons ensemble vos compétences complémentaires</string>
+    <string name="informatique_pour_tous_n_consultez_la_listes_n_ci_dessous">INFORMATIQUE POUR TOUS : \nConsultez la listes\nci dessous</string>
+    <string name="autres_activit_s">Autres activités</string>
+    <string name="retour">Retour</string>
+    <string name="notre_expertise_votre_expansion_n_copyright_2cs_2024">Notre Expertise - Votre Expansion\nCopyright@2CS-2024</string>
+    <string name="comp_tences">Compétences</string>
+    <string name="informatique_et_tic">Informatique et TIC</string>
+    <string name="autres_prestations_intello">Autres prestations intello</string>
+    <string name="cr_er_un_compte">Créer Un Compte</string>
+    <string name="newsletter">Newsletter</string>
+
+    <string name="besoin_service">Besoin d\'un service\nintellectuel</string>
+    <string name="autres_prestations">- Autres prestations intellos</string>
+    <string name="complement_prestations">- Complément de compétences</string>
+
+    <string name="informatique_pour_enfants"><![CDATA[<b>1- Informatique Pour Enfants</b> : <br>Dénommée <font color="#FF0000"><strong>"Génie Africain (GA)"</strong></font> en informatique, elle ne concerne que les enfants du niveau des écoles primaires.<br>Pour plus d\'infos, Cliquez ici]]></string>
+
+    <string name="informatique_pour_adolescents"><![CDATA[<b>2- Informatique Pour Jeunes</b> : <br>Est consacrée aux jeunes enfants et Adolescents du secondaire.]]></string>
+
+    <string name="informatique_pour_adultes_et_professionnels"><![CDATA[<b>3- Informatique Pour Adultes et Pro.</b> : <br>Elle est réservée adultes, universitaires et professionnels.]]></string>
+
+    <string name="faso_learning_code"><![CDATA[<font color="#FF0000"><strong>Nouveau :</strong></font><br> <b><font color="#000080">4- Faso Learning Code (FLC)</font></b> : <br>Une Informatique Pour Tout le monde, toutes les couches de la société, tous les âges. Personne s\'est délaissée.<br><b><font color="#FF0000">Lancement Officiel : Très Bientôt</font></b>]]></string>
+    <string name="coaching">- Coaching</string>
+    <string name="formation_g_nie_africain">Formation \nGENIE AFRICAIN</string>
+
 </resources>

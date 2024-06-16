@@ -11,6 +11,8 @@
         <item>@font/andika</item>
         <item>@font/andika_new_basic</item>
         <item>@font/capriola</item>
+        <item>@font/noto_sans</item>
+        <item>@font/open_sans_light</item>
         <item>@font/roboto_mono_thin</item>
         <item>@font/roboto_thin</item>
     </array>
