@@ -4,10 +4,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Html;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.TextPaint;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -19,8 +26,6 @@ public class TrainingActivity extends AppCompatActivity {
     private final Handler handler = new Handler();
     private int currentImageIndex = 0;
     private final int[] images = {R.drawable.gaxl150, R.drawable.ga2xl150, R.drawable.gapdxl150, R.drawable.gapd2xl150};
-    Button retour1;
-    TextView ipeTextView, ipadoTextView, ipaduproTextView, flc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +33,11 @@ public class TrainingActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_training);
 
-        retour1 = findViewById(R.id.retour1);
-        ipeTextView = findViewById(R.id.ipe);
-        ipadoTextView = findViewById(R.id.ipado);
-        ipaduproTextView = findViewById(R.id.ipadupro);
-        flc = findViewById(R.id.flc);
+        Button retour1 = findViewById(R.id.retour1);
+        TextView ipeTextView = findViewById(R.id.ipe);
+        TextView ipadoTextView = findViewById(R.id.ipado);
+        TextView ipaduproTextView = findViewById(R.id.ipadupro);
+        TextView flc = findViewById(R.id.flc);
 
         gaTextView = findViewById(R.id.ga);
         startImageSwitcher();
@@ -49,10 +54,44 @@ public class TrainingActivity extends AppCompatActivity {
         String htmlTextPro = getString(R.string.informatique_pour_adultes_et_professionnels);
         String htmlTextFlc = getString(R.string.faso_learning_code);
 
-        ipeTextView.setText(Html.fromHtml(htmlText, Html.FROM_HTML_MODE_LEGACY));
-        ipadoTextView.setText(Html.fromHtml(htmlTextAdo, Html.FROM_HTML_MODE_LEGACY));
-        ipaduproTextView.setText(Html.fromHtml(htmlTextPro, Html.FROM_HTML_MODE_LEGACY));
-        flc.setText(Html.fromHtml(htmlTextFlc, Html.FROM_HTML_MODE_LEGACY));
+        // Interpréter les balises HTML
+        Spanned spannedText = Html.fromHtml(htmlText, Html.FROM_HTML_MODE_LEGACY);
+        Spanned spannedTextAdo = Html.fromHtml(htmlTextAdo, Html.FROM_HTML_MODE_LEGACY);
+        Spanned spannedTextPro = Html.fromHtml(htmlTextPro, Html.FROM_HTML_MODE_LEGACY);
+        Spanned spannedTextFlc = Html.fromHtml(htmlTextFlc, Html.FROM_HTML_MODE_LEGACY);
+
+        // Définir la partie du texte que l'on souhaite rendre cliquable
+        String clickableText = "Cliquez ici";
+        int start = spannedText.toString().indexOf(clickableText);
+        int end = start + clickableText.length();
+
+        SpannableString spannableString = new SpannableString(spannedText);
+
+        ClickableSpan clickableSpan = new ClickableSpan() {
+            @Override
+            public void onClick(@NonNull View widget) {
+                // Action à effectuer
+                Intent ga_details = new Intent(TrainingActivity.this, GaActivity.class);
+                startActivity(ga_details);
+            }
+
+            @Override
+            public void updateDrawState(@NonNull TextPaint ds){
+                super.updateDrawState(ds);
+                ds.setUnderlineText(false); // Pour désactiver le soulignement du texte de lien
+            }
+        };
+
+        spannableString.setSpan(clickableSpan, start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        // Appliquer le spannableString au TextView ipe
+        ipeTextView.setText(spannableString);
+        ipeTextView.setMovementMethod(LinkMovementMethod.getInstance());
+
+        // Appliquer les textes interprétés avec HTML aux autres TextViews
+        ipadoTextView.setText(spannedTextAdo);
+        ipaduproTextView.setText(spannedTextPro);
+        flc.setText(spannedTextFlc);
 
         // Le paramètre ViewCompat.setOnApplyWindowInsetsListener est formaté pour être plus
         // lisible et ne pas dépasser les 120 caractères par ligne.
@@ -70,7 +109,7 @@ public class TrainingActivity extends AppCompatActivity {
                 // Switch the background image
                 gaTextView.setBackgroundResource(images[currentImageIndex]);
                 currentImageIndex = (currentImageIndex + 1) % images.length;
-                handler.postDelayed(this, 5000); // 30 seconds
+                handler.postDelayed(this, 5000); // 5 seconds
             }
         };
         handler.post(runnable);
