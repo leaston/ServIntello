@@ -18,8 +18,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class GaActivity extends AppCompatActivity {
 
-    private EditText nomPere, nomMere, telephone, email, nomEnfant, ageEnfant, descriptionMaladie;
-    private Spinner classeEnfant;
+    private EditText nomPere, nomMere, telephone, email, nomEnfant, descriptionMaladie;
+    private Spinner classeEnfant, ageEnfant;
     private RadioButton radioOui, radioNon;
 
     @Override
@@ -34,7 +34,9 @@ public class GaActivity extends AppCompatActivity {
         telephone = findViewById(R.id.telephone);
         email = findViewById(R.id.email);
         nomEnfant = findViewById(R.id.nom_enfant);
-        //ageEnfant = findViewById(R.id.age_enfant);
+        ageEnfant = findViewById(R.id.age_enfant);
+        radioOui = findViewById(R.id.radio_oui);
+        radioNon = findViewById(R.id.radio_non);
         classeEnfant = findViewById(R.id.classe_enfant);
         descriptionMaladie = findViewById(R.id.description_maladie);
         RadioGroup maladieRadioGroup = findViewById(R.id.maladie_radio_group);
@@ -66,7 +68,7 @@ public class GaActivity extends AppCompatActivity {
         String telephoneValue = telephone.getText().toString();
         String emailValue = email.getText().toString();
         String nomEnfantValue = nomEnfant.getText().toString();
-        String ageEnfantValue = ageEnfant.getText().toString();
+        String ageEnfantValue = ageEnfant.getSelectedItem().toString();
         String classeEnfantValue = classeEnfant.getSelectedItem().toString();
         String maladieValue = radioOui.isChecked() ? "Oui" : "Non";
         String descriptionMaladieValue = descriptionMaladie.getText().toString();
@@ -79,6 +81,14 @@ public class GaActivity extends AppCompatActivity {
             // Envoyer les données (à implémenter selon vos besoins, par exemple en utilisant une API)
             Toast.makeText(this, "Formulaire envoyé avec succès", Toast.LENGTH_LONG).show();
         }
+    }
+
+    public RadioButton getRadioNon() {
+        return radioNon;
+    }
+
+    public void setRadioNon(RadioButton radioNon) {
+        this.radioNon = radioNon;
     }
 }
 

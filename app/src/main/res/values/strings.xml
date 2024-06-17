@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">ServIntello</string>
     <string name="nos_services_sont_les_suivants">Nos services sont les suivants :</string>
     <string name="formations_pratiques">- Formations pratiques</string>
@@ -58,11 +58,11 @@
     <!-- Other strings -->
     <string-array name="classes_array">
         <item>Choisir sa classe</item>
-        <item>CP1</item>
+        <item tools:ignore="Typos">CP1</item>
         <item>CP2</item>
-        <item>CE1</item>
+        <item tools:ignore="Typos">CE1</item>
         <item>CE2</item>
-        <item>CM1</item>
+        <item tools:ignore="Typos">CM1</item>
         <item>CM2</item>
     </string-array>
 
