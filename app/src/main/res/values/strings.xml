@@ -27,9 +27,9 @@
     <string name="autres_prestations">- Autres prestations intellos</string>
     <string name="complement_prestations">- Complément de compétences</string>
 
-    <string name="informatique_pour_enfants"><![CDATA[<b>1- Informatique Pour Enfants</b> : <br>Dénommée <font color="#FF0000"><strong>"Génie Africain (GA)"</strong></font> en informatique, elle ne concerne que les enfants du niveau des écoles primaires.<br>Pour plus d\'infos, <em><font color="#28A745">Cliquez ici.</font></em>]]></string>
+    <string name="informatique_pour_enfants"><![CDATA[<b>1- Informatique Pour Enfants</b> : <br>Dénommée <font color="#FF0000"><strong>"Génie Africain (GA)"</strong></font> en informatique, elle ne concerne que les enfants du niveau des écoles primaires.<br>Pour plus d\'infos, <em>Cliquez ici.</em>]]></string>
 
-    <string name="informatique_pour_adolescents"><![CDATA[<b>2- Informatique Pour Jeunes</b> : <br>Est consacrée aux jeunes enfants et Adolescents du secondaire.]]></string>
+    <string name="informatique_pour_adolescents"><![CDATA[<b>2- Informatique Pour Jeunes</b> : <br>Est consacrée aux jeunes enfants et Adolescents du secondaire.<br>Pour plus d\'infos, <em>Cliquez ici.</em>]]></string>
 
     <string name="informatique_pour_adultes_et_professionnels"><![CDATA[<b>3- Informatique Pour Adultes et Pro.</b> : <br>Elle est réservée adultes, universitaires et professionnels.]]></string>
 

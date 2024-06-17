@@ -93,7 +93,6 @@ public class TrainingActivity extends AppCompatActivity {
         ipeTextView.setMovementMethod(LinkMovementMethod.getInstance());
 
         // Appliquer les textes interprétés avec HTML aux autres TextViews
-        ipeTextView.setText(spannedTextIpe);
         ipadoTextView.setText(spannedTextAdo);
         ipaduproTextView.setText(spannedTextPro);
         flcTextView.setText(spannedTextFlc);
