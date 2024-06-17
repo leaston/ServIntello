@@ -1,5 +1,7 @@
 package com.example.servintello;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,7 +23,10 @@ public class GaActivity extends AppCompatActivity {
     private EditText nomPere, nomMere, telephone, email, nomEnfant, descriptionMaladie;
     private Spinner classeEnfant, ageEnfant;
     private RadioButton radioOui, radioNon;
+    private Button bouton_envoyer;
 
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,6 +85,8 @@ public class GaActivity extends AppCompatActivity {
         } else {
             // Envoyer les données (à implémenter selon vos besoins, par exemple en utilisant une API)
             Toast.makeText(this, "Formulaire envoyé avec succès", Toast.LENGTH_LONG).show();
+            Intent paiementOm = new Intent(GaActivity.this, OrangeActivity.class);
+            startActivity(paiementOm);
         }
     }
 

@@ -54,6 +54,7 @@
     <string name="description_de_la_maladie">Donnez une brève description de cette maladie</string>
     <string name="envoyer">Envoyer</string>
     <string name="inscrivez_votre_enfant">INSCRIVEZ VOTRE ENFANT</string>
+    <string name="paiement_par_orange_money">Paiement par \nOrange Money</string>
 
     <!-- Other strings -->
     <string-array name="classes_array">

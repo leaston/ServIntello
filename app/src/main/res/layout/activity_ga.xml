@@ -40,6 +40,7 @@
                 tools:ignore="RtlSymmetry" />
 
             <TextView
+                android:id="@+id/label_inscription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/Orange_deteint"
@@ -52,7 +53,7 @@
                 android:textColor="#B30021" />
 
             <TextView
-                android:id="@+id/inscription_ga"
+                android:id="@+id/lbl_details_inscription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/entete_form_inscription_ga"

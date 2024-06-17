@@ -15,4 +15,5 @@
     <color name="bouton_Danger">#DC3545</color>
     <color name="bouton_Warning">#FFC107</color>
     <color name="bouton_Dark">#343A40</color>
+    <color name="text_red_dark">#B30021</color>
 </resources>
