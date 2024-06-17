@@ -1,24 +1,23 @@
 package com.example.servintello;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Html;
 import android.text.SpannableString;
+import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.TextPaint;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
-import android.text.style.ImageSpan;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -40,7 +39,8 @@ public class TrainingActivity extends AppCompatActivity {
         TextView ipeTextView = findViewById(R.id.ipe);
         TextView ipadoTextView = findViewById(R.id.ipado);
         TextView ipaduproTextView = findViewById(R.id.ipadupro);
-        TextView flc = findViewById(R.id.flc);
+        TextView flcTextView = findViewById(R.id.flc);
+        ImageView iconImageView = findViewById(R.id.icon);
 
         gaTextView = findViewById(R.id.ga);
         startImageSwitcher();
@@ -96,10 +96,12 @@ public class TrainingActivity extends AppCompatActivity {
         ipeTextView.setText(spannedTextIpe);
         ipadoTextView.setText(spannedTextAdo);
         ipaduproTextView.setText(spannedTextPro);
-        flc.setText(spannedTextFlc);
+        flcTextView.setText(spannedTextFlc);
 
         // Ajouter une icône au TextView flc
-        addIconToTextView(flc, spannedTextFlc, R.drawable.ic_icon_flc);
+        //Cette méthode ajoute une icône à un TextView à la position spécifiée (haut à droite ou
+        // bas à droite). Elle utilise SpannableStringBuilder pour créer le texte final avec l'icône.
+        addIconToTextView(flcTextView, spannedTextFlc, iconImageView);
 
         // Le paramètre ViewCompat.setOnApplyWindowInsetsListener est formaté pour être plus
         // lisible et ne pas dépasser les 120 caractères par ligne.
@@ -122,14 +124,13 @@ public class TrainingActivity extends AppCompatActivity {
         };
         handler.post(runnable);
     }
-    private void addIconToTextView(TextView textView, Spanned text, int drawableResId) {
-        SpannableString spannableString = new SpannableString(text);
-        Drawable drawable = ContextCompat.getDrawable(this, drawableResId);
-        drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
+    private void addIconToTextView(TextView textView, Spanned text, ImageView iconImageView) {
+        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder();
+        spannableStringBuilder.append(text);
+        textView.setText(spannableStringBuilder);
 
-        ImageSpan imageSpan = new ImageSpan(drawable, ImageSpan.ALIGN_BASELINE);
-        spannableString.setSpan(imageSpan, 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-
-        textView.setText(spannableString);
+        // Positionner l'icône en haut à droite
+        iconImageView.setVisibility(View.VISIBLE);
     }
+
 }

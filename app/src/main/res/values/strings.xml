@@ -27,7 +27,7 @@
     <string name="autres_prestations">- Autres prestations intellos</string>
     <string name="complement_prestations">- Complément de compétences</string>
 
-    <string name="informatique_pour_enfants"><![CDATA[<b>1- Informatique Pour Enfants</b> : <br>Dénommée <font color="#FF0000"><strong>"Génie Africain (GA)"</strong></font> en informatique, elle ne concerne que les enfants du niveau des écoles primaires.<br>Pour plus d\'infos, <em>Cliquez ici.</em>]]></string>
+    <string name="informatique_pour_enfants"><![CDATA[<b>1- Informatique Pour Enfants</b> : <br>Dénommée <font color="#FF0000"><strong>"Génie Africain (GA)"</strong></font> en informatique, elle ne concerne que les enfants du niveau des écoles primaires.<br>Pour plus d\'infos, <em><font color="#28A745">Cliquez ici.</font></em>]]></string>
 
     <string name="informatique_pour_adolescents"><![CDATA[<b>2- Informatique Pour Jeunes</b> : <br>Est consacrée aux jeunes enfants et Adolescents du secondaire.]]></string>
 
@@ -36,5 +36,6 @@
     <string name="faso_learning_code"><![CDATA[<font color="#FF0000"><strong>Nouveau :</strong></font><br> <b><font color="#000080">4- Faso Learning Code (FLC)</font></b> : <br>Une Informatique Pour Tout le monde, toutes les couches de la société, tous les âges. Personne s\'est délaissée.<br><b><font color="#FF0000">Lancement Officiel : Très Bientôt</font></b>]]></string>
     <string name="coaching">- Coaching</string>
     <string name="formation_g_nie_africain">Formation \nGENIE AFRICAIN</string>
+    <string name="ic_ne_de_flc">Icône de FLC</string>
 
 </resources>
