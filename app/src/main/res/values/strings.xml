@@ -37,5 +37,9 @@
     <string name="formation_g_nie_africain">Formation \nGENIE AFRICAIN</string>
     <string name="ic_ne_de_flc">Icône de FLC</string>
     <string name="connexion">Connexion</string>
+    <string name="faso_learning_code_flc">Faso Learning\nCode (FLC)</string>
+    <string name="informatique_pour_les_adultes_et_les_professionnels">Informatique Pour Les Adultes et Les Professionnels</string>
+    <string name="informatique_pour_les_jeunes_adolescents">Informatique Pour Les Jeunes Adolescents</string>
+    <string name="nous_sommes_l_pour_vous_servir_vous_n_tes_pas_perdus">Nous sommes là pour vous servir. Vous n\'êtes pas perdus</string>
 
 </resources>

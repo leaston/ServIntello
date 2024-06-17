@@ -63,36 +63,8 @@ public class TrainingActivity extends AppCompatActivity {
         Spanned spannedTextPro = Html.fromHtml(htmlTextPro, Html.FROM_HTML_MODE_LEGACY);
         Spanned spannedTextFlc = Html.fromHtml(htmlTextFlc, Html.FROM_HTML_MODE_LEGACY);
 
-        // Définir la partie du texte que l'on souhaite rendre cliquable
-        String clickableText = "Cliquez ici";
-        int start = spannedTextIpe.toString().indexOf(clickableText);
-        // La ligne ci-dessous est à revoir plus tard
-        int end = start + clickableText.length();
-
-        SpannableString spannableString = new SpannableString(spannedTextIpe);
-
-        ClickableSpan clickableSpan = new ClickableSpan() {
-            @Override
-            public void onClick(@NonNull View widget) {
-                // Action à effectuer
-                Intent ga_details = new Intent(TrainingActivity.this, GaActivity.class);
-                startActivity(ga_details);
-            }
-
-            @Override
-            public void updateDrawState(@NonNull TextPaint ds){
-                super.updateDrawState(ds);
-                ds.setUnderlineText(false); // Pour désactiver le soulignement du texte de lien
-            }
-        };
-
-        spannableString.setSpan(clickableSpan, start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-
-        // Appliquer le spannableString au TextView ipe
-        ipeTextView.setText(spannableString);
-        ipeTextView.setMovementMethod(LinkMovementMethod.getInstance());
-
         // Appliquer les textes interprétés avec HTML aux autres TextViews
+        ipeTextView.setText(spannedTextIpe);
         ipadoTextView.setText(spannedTextAdo);
         ipaduproTextView.setText(spannedTextPro);
         flcTextView.setText(spannedTextFlc);
@@ -101,6 +73,13 @@ public class TrainingActivity extends AppCompatActivity {
         //Cette méthode ajoute une icône à un TextView à la position spécifiée (haut à droite ou
         // bas à droite). Elle utilise SpannableStringBuilder pour créer le texte final avec l'icône.
         addIconToTextView(flcTextView, spannedTextFlc, iconImageView);
+
+        // Gérer les occurrences de "Cliquez ici" pour ipeTextView
+        handleClickableText(ipeTextView, spannedTextIpe, 1);
+        handleClickableText(ipadoTextView, spannedTextAdo, 2);
+        handleClickableText(ipaduproTextView, spannedTextPro, 3);
+        handleClickableText(flcTextView, spannedTextFlc, 4);
+
 
         // Le paramètre ViewCompat.setOnApplyWindowInsetsListener est formaté pour être plus
         // lisible et ne pas dépasser les 120 caractères par ligne.
@@ -130,6 +109,55 @@ public class TrainingActivity extends AppCompatActivity {
 
         // Positionner l'icône en haut à droite
         iconImageView.setVisibility(View.VISIBLE);
+    }
+
+    private void handleClickableText(TextView textView, Spanned text, int viewId) {
+        String clickableText = "Cliquez ici";
+        SpannableString spannableString = new SpannableString(text);
+
+        int startIndex = text.toString().indexOf(clickableText);
+        while (startIndex >= 0) {
+            int endIndex = startIndex + clickableText.length();
+            ClickableSpan clickableSpan = getClickableSpanForOccurrence(viewId);
+            spannableString.setSpan(clickableSpan, startIndex, endIndex, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            startIndex = text.toString().indexOf(clickableText, endIndex);
+        }
+
+        textView.setText(spannableString);
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
+    }
+
+    private ClickableSpan getClickableSpanForOccurrence(int viewId) {
+        return new ClickableSpan() {
+            @Override
+            public void onClick(@NonNull View widget) {
+                Intent intent;
+                switch (viewId) {
+                    case 1:
+                        intent = new Intent(TrainingActivity.this, GaActivity.class);
+                        break;
+                    case 2:
+                        intent = new Intent(TrainingActivity.this, IpadoActivity.class);
+                        break;
+                    case 3:
+                        intent = new Intent(TrainingActivity.this, IpaduproActivity.class);
+                        break;
+                    case 4:
+                        intent = new Intent(TrainingActivity.this, FlcActivity.class);
+                        break;
+                    default:
+                        intent = new Intent(TrainingActivity.this, DefaultActivity.class);
+                        break;
+                }
+                startActivity(intent);
+            }
+
+            @Override
+            public void updateDrawState(@NonNull TextPaint ds) {
+                super.updateDrawState(ds);
+                ds.setUnderlineText(false); // Pour désactiver le soulignement du texte de lien
+            }
+        };
     }
 
 }
