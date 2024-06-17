@@ -278,7 +278,7 @@
                         android:layout_margin="5dp"
                         android:background="@drawable/button_corner"
                         android:fontFamily="@font/andika"
-                        android:text="@string/newsletter"
+                        android:text="@string/se_connecter"
                         android:textColor="@color/white"
                         android:textSize="10sp"
                         tools:ignore="SmallSp" />
