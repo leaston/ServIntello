@@ -41,5 +41,42 @@
     <string name="informatique_pour_les_adultes_et_les_professionnels">Informatique Pour Les Adultes et Les Professionnels</string>
     <string name="informatique_pour_les_jeunes_adolescents">Informatique Pour Les Jeunes Adolescents</string>
     <string name="nous_sommes_l_pour_vous_servir_vous_n_tes_pas_perdus">Nous sommes là pour vous servir. Vous n\'êtes pas perdus</string>
+    <string name="entete_form_inscription_ga">Vous pouvez inscrire votre enfant, en remplissant simplement ce formulaire en moins de 2 minutes.</string>
+    <string name="nom_du_p_re">Nom du père</string>
+    <string name="nom_de_la_m_re">Nom de la mère</string>
+    <string name="num_ro_de_t_l_phone">Numéro de téléphone</string>
+    <string name="email">Email</string>
+    <string name="nom_de_l_enfant">Nom de l\'enfant</string>
+    <string name="ge_de_l_enfant">Âge de l\'enfant</string>
+    <string name="l_enfant_souffre_t_il_d_une_maladie">L\'enfant souffre-t-il d\'une maladie ?</string>
+    <string name="oui">Oui</string>
+    <string name="non">Non</string>
+    <string name="description_de_la_maladie">Donnez une brève description de cette maladie</string>
+    <string name="envoyer">Envoyer</string>
+    <string name="inscrivez_votre_enfant">INSCRIVEZ VOTRE ENFANT</string>
 
+    <!-- Other strings -->
+    <string-array name="classes_array">
+        <item>Choisir sa classe</item>
+        <item>CP1</item>
+        <item>CP2</item>
+        <item>CE1</item>
+        <item>CE2</item>
+        <item>CM1</item>
+        <item>CM2</item>
+    </string-array>
+
+    <!-- Other strings -->
+    <string-array name="age_array">
+        <item>Choisir son âge</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
 </resources>

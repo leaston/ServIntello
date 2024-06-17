@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="30dp"
     tools:context=".GaActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -11,44 +12,227 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/ga_details"
-            android:layout_width="0dp"
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_corner"
-            android:fontFamily="@font/amaranth"
-            android:height="135dp"
-            android:gravity="center"
-            android:minHeight="48dp"
-            android:textColor="@color/Orange_deteint"
-            android:paddingTop="10dp"
-            android:text="@string/formation_g_nie_africain"
-            android:textSize="30sp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:paddingBottom="10dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="RtlSymmetry" />
+            android:orientation="vertical"
+            android:padding="1dp"
+            tools:ignore="MissingConstraints">
 
-        <Button
-            android:id="@+id/retour1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="5dp"
-            android:background="@color/bouton_Secondary"
-            android:textColor="@color/white"
-            android:text="@string/retour"
-            app:layout_constraintTop_toBottomOf="@id/ga_details"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            <TextView
+                android:id="@+id/ga_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner"
+                android:fontFamily="@font/amaranth"
+                android:height="135dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:textColor="@color/Orange_deteint"
+                android:paddingTop="10dp"
+                android:text="@string/formation_g_nie_africain"
+                android:textSize="30sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="RtlSymmetry" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Orange_deteint"
+                android:layout_marginTop="-20dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:gravity="center"
+                android:text="@string/inscrivez_votre_enfant"
+                android:textSize="18sp"
+                android:textColor="#B30021" />
 
+            <TextView
+                android:id="@+id/inscription_ga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/entete_form_inscription_ga"
+                android:background="@color/bouton_Dark"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/andika"/>
+
+            <!-- Nom du père -->
+            <EditText
+                android:id="@+id/nom_pere"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="username"
+                android:minHeight="48dp"
+                android:background="@color/bleu_claire"
+                android:layout_marginBottom="3dp"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:hint="@string/nom_du_p_re"
+                android:inputType="textPersonName" />
+
+            <!-- Nom de la mère -->
+            <EditText
+                android:id="@+id/nom_mere"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="username"
+                android:minHeight="48dp"
+                android:background="@color/bleu_claire"
+                android:layout_marginBottom="3dp"
+                android:padding="10dp"
+                android:hint="@string/nom_de_la_m_re"
+                android:inputType="textPersonName" />
+
+            <!-- Numero de téléphone -->
+            <EditText
+                android:id="@+id/telephone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/num_ro_de_t_l_phone"
+                android:background="@color/bleu_claire"
+                android:textColor="@color/BlueOf2cs"
+                android:layout_marginBottom="3dp"
+                android:padding="10dp"
+                android:inputType="phone"
+                android:autofillHints="phone"
+                android:minHeight="48dp"/>
+
+            <!-- Email -->
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                android:background="@color/bleu_claire"
+                android:textColor="@color/BlueOf2cs"
+                android:layout_marginBottom="3dp"
+                android:padding="10dp"
+                android:inputType="textEmailAddress"
+                android:autofillHints="emailAddress"
+                android:minHeight="48dp"/>
+
+            <!-- Nom de l'enfant -->
+            <EditText
+                android:id="@+id/nom_enfant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nom_de_l_enfant"
+                android:minHeight="48dp"
+                android:layout_marginBottom="3dp"
+                android:padding="10dp"
+                android:background="@color/bleu_claire"
+                android:textColor="@color/BlueOf2cs"
+                android:inputType="textPersonName"
+                android:autofillHints="username"/>
+
+            <!-- Âge de l'enfant -->
+            <Spinner
+                android:id="@+id/age_enfant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/age_array"
+                android:background="@color/bleu_claire"
+                android:layout_marginBottom="3dp"
+                android:padding="8dp"
+                android:minHeight="48dp"/>
+
+            <!-- Classe de l'enfant -->
+            <Spinner
+                android:id="@+id/classe_enfant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/classes_array"
+                android:background="@color/bleu_claire"
+                android:layout_marginBottom="3dp"
+                android:padding="8dp"
+                android:minHeight="48dp"/>
+
+            <!-- Souffre-t-il d'une maladie ? -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/andika"
+                android:background="@color/bouton_Dark"
+                android:textSize="14sp"
+                android:textColor="@color/bleu_claire"
+                android:text="@string/l_enfant_souffre_t_il_d_une_maladie" />
+
+            <RadioGroup
+                android:id="@+id/maladie_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:background="@color/bleu_claire"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_oui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/oui"
+                    android:minHeight="48dp"/>
+
+                <RadioButton
+                    android:id="@+id/radio_non"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/non"
+                    android:minHeight="48dp"/>
+            </RadioGroup>
+
+            <!-- Description de la maladie -->
+            <EditText
+                android:id="@+id/description_maladie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/description_de_la_maladie"
+                android:visibility="gone"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:background="@color/Orange_deteint"
+                android:textColor="@color/BlueOf2cs"
+                android:autofillHints="username"/>
+
+            <!-- Bouton Envoyer -->
+            <Button
+                android:id="@+id/bouton_envoyer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/envoyer"
+                android:background="@drawable/button_corner"
+                android:textColor="@color/bleu_claire"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/retour1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bouton_Secondary"
+                android:textColor="@color/white"
+                android:text="@string/retour"
+                android:height="48dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
