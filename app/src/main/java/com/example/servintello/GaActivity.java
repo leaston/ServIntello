@@ -46,6 +46,7 @@ public class GaActivity extends AppCompatActivity {
         descriptionMaladie = findViewById(R.id.description_maladie);
         RadioGroup maladieRadioGroup = findViewById(R.id.maladie_radio_group);
         Button boutonEnvoyer = findViewById(R.id.bouton_envoyer);
+        Button retour1 = findViewById(R.id.retour1);
 
         // Gérer la visibilité du champ de description de la maladie
         maladieRadioGroup.setOnCheckedChangeListener((group, checkedId) -> {
@@ -54,6 +55,11 @@ public class GaActivity extends AppCompatActivity {
             } else if (checkedId == R.id.radio_non) {
                 descriptionMaladie.setVisibility(View.GONE);
             }
+        });
+
+        retour1.setOnClickListener(v -> {
+            Intent retour = new Intent(GaActivity.this, TrainingActivity.class);
+            startActivity(retour);
         });
 
         // Gérer le clic sur le bouton Envoyer
