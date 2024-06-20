@@ -16,4 +16,6 @@
     <color name="bouton_Warning">#FFC107</color>
     <color name="bouton_Dark">#343A40</color>
     <color name="text_red_dark">#B30021</color>
+    <color name="Orange_money">#FF7900</color>
+    <color name="Moov_money">#0E5EA9</color>
 </resources>

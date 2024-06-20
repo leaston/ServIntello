@@ -55,6 +55,15 @@
     <string name="envoyer">Envoyer</string>
     <string name="inscrivez_votre_enfant">INSCRIVEZ VOTRE ENFANT</string>
     <string name="paiement_par_orange_money">Paiement par \nOrange Money</string>
+    <string name="paiement_mobile">Paiement Mobile</string>
+    <string name="quel_r_seau_mobile_voulez_vous_utiliser_pour_effectuer_le_paiement">Quel Réseau Mobile voulez-vous utiliser pour effectuer le paiement ?</string>
+    <string name="orange_money">Orange Money</string>
+    <string name="moov_money">Moov Money</string>
+    <string name="montant_mensuel_n25_000_fcfa_enfant">Montant mensuel :\n25.000 FCFA / enfant</string>
+    <string name="numero_de_telephone">Numéro de téléphone</string>
+    <string name="orange_of_money">Orange Money</string>
+    <string name="autre_moyen_de_paiement">Autre moyen de paiement</string>
+    <string name="code_pin">Code PIN</string>
 
     <!-- Other strings -->
     <string-array name="classes_array">

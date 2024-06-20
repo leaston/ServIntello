@@ -91,7 +91,7 @@ public class GaActivity extends AppCompatActivity {
         } else {
             // Envoyer les données (à implémenter selon vos besoins, par exemple en utilisant une API)
             Toast.makeText(this, "Formulaire envoyé avec succès", Toast.LENGTH_LONG).show();
-            Intent paiementOm = new Intent(GaActivity.this, OrangeActivity.class);
+            Intent paiementOm = new Intent(GaActivity.this, MobilePaymentActivity.class);
             startActivity(paiementOm);
         }
     }

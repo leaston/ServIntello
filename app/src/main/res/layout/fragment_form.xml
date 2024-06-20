@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/montant_gaf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/abel"
+        android:gravity="center"
+        android:minHeight="48dp"
+        android:padding="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/montant_mensuel_n25_000_fcfa_enfant"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/choix_du_paiement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/quel_r_seau_mobile_voulez_vous_utiliser_pour_effectuer_le_paiement"
+        android:padding="0dp"
+        android:fontFamily="@font/amaranth"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_vertical"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/telephone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/numero_de_telephone"
+        android:inputType="phone"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:autofillHints="username"/>
+
+    <EditText
+        android:id="@+id/pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/code_pin"
+        android:inputType="numberPassword"
+        android:maxLength="4"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:autofillHints="username" />
+
+    <!-- Ajoutez d'autres champs de formulaire ici -->
+
+</LinearLayout>

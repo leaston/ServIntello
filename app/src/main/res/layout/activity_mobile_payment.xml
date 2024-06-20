@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GaActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/main_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/ga_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Orange_deteint"
+                android:fontFamily="@font/amaranth"
+                android:height="135dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:textColor="@color/text_red_dark"
+                android:paddingTop="10dp"
+                android:text="@string/paiement_mobile"
+                android:textSize="30sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="RtlSymmetry" />
+
+
+            <!--TextView
+                android:id="@+id/montant_ga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/abel"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:text="@string/montant_mensuel_n25_000_fcfa_enfant"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/choix_paiement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/quel_r_seau_mobile_voulez_vous_utiliser_pour_effectuer_le_paiement"
+                android:padding="10dp"
+                android:fontFamily="@font/amaranth"
+                android:textSize="16sp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:minHeight="48dp" />
+
+            <LinearLayout
+                android:id="@+id/second_lay"
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+
+                <Button
+                    android:id="@+id/orange_money"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@color/Orange_money"
+                    android:fontFamily="@font/andika"
+                    android:text="@string/orange_money"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    tools:ignore="NestedWeights,SmallSp" />
+
+                <Button
+                    android:id="@+id/moov_money"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@color/Moov_money"
+                    android:fontFamily="@font/andika"
+                    android:text="@string/moov_money"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+
+            </LinearLayout-->
+            <!-- Partie intégrant les Fragments -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context=".MobilePaymentActivity">
+
+                <FrameLayout
+                    android:id="@+id/form_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:id="@+id/payment_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

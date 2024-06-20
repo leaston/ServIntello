@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/second_lay"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/orange_money"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@color/Orange_money"
+            android:fontFamily="@font/andika"
+            android:text="@string/orange_money"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            tools:ignore="NestedWeights,SmallSp" />
+
+        <Button
+            android:id="@+id/moov_money"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@color/Moov_money"
+            android:fontFamily="@font/andika"
+            android:text="@string/moov_money"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/third_lay"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/other_ey"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@color/bouton_Secondary"
+            android:fontFamily="@font/andika"
+            android:text="@string/autre_moyen_de_paiement"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            tools:ignore="NestedWeights,SmallSp" />
+
+    </LinearLayout>
+
+    <!--Button
+        android:id="@+id/orange_money"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/Orange_money"
+        android:text="@string/orange_money"
+        android:textColor="@color/white"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_weight="1"
+        android:layout_margin="5dp"
+        android:fontFamily="@font/andika"
+        android:textSize="10sp"
+        tools:ignore="SmallSp,Suspicious0dp"/-->
+
+    <!-- Ajoutez d'autres boutons ou éléments de paiement ici -->
+
+</LinearLayout>
