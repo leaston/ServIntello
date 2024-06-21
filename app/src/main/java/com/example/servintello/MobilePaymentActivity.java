@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log; // Importez la classe Log
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +18,7 @@ public class MobilePaymentActivity extends AppCompatActivity {
 
     private static final int REQUEST_CALL_PHONE_PERMISSION = 1;
     private FormFragment formFragment;
+    private static final String TAG = "MobilePaymentActivity"; // Définissez un tag pour le logging
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +66,7 @@ public class MobilePaymentActivity extends AppCompatActivity {
             startActivity(intent);
             Toast.makeText(this, "Le numéro " + phoneNumber + " vient d'envoyer la somme de 25000 FCFA au numéro 74838314", Toast.LENGTH_LONG).show();
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, "Échec de l'envoi du code USSD. Veuillez réessayer.", e); // Utilisez Log.e pour l'erreur
             Toast.makeText(this, "Échec de l'envoi du code USSD. Veuillez réessayer.", Toast.LENGTH_LONG).show();
         }
     }
