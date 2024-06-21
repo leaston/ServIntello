@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 public class FormFragment extends Fragment {
 
     private EditText telephoneEditText;
-    private EditText pinEditText;
+    //private EditText pinEditText;
 
 
     @Nullable
@@ -20,7 +20,7 @@ public class FormFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_form, container, false);
         telephoneEditText = view.findViewById(R.id.telephone);
-        pinEditText = view.findViewById(R.id.pin);
+        //pinEditText = view.findViewById(R.id.pin);
 
         return view;
     }
@@ -32,11 +32,11 @@ public class FormFragment extends Fragment {
         return "";
     }
 
-    public String getPinCode() {
+    /*public String getPinCode() {
         if (pinEditText != null) {
             return pinEditText.getText().toString();
         }
         return "";
-    }
+    }*/
 
 }

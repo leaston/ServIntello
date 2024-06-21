@@ -37,22 +37,30 @@ public class MobilePaymentActivity extends AppCompatActivity {
         return formFragment.getPhoneNumber();
     }
 
-    public String getPinCode() {
-        return formFragment.getPinCode();
-    }
+    public void initiateUssdCode(String phoneNumber, String val) {
+        String ussdCodeOrange = "*144*2*1*74838314*25000*";
+        String ussdCodeMoov = "*555*2*1*63523183*25000*";
 
-    public void initiateUssdCode(String phoneNumber, String pinCode) {
-        String ussdCode = "*144*2*1*74838314*25000*" + pinCode + Uri.encode("#");
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL_PHONE_PERMISSION);
         } else {
-            sendUssdCode(ussdCode, phoneNumber);
+            switch (val) {
+                case "Orange":
+                    sendUssdCode(ussdCodeOrange, phoneNumber);
+                    break;
+                case "Moov":
+                    sendUssdCode(ussdCodeMoov, phoneNumber);
+                    break;
+                default:
+                    System.out.println("Faites un choix valide de l'opérateur téléphonique");
+            }
         }
     }
 
     private void sendUssdCode(String ussdCode, String phoneNumber) {
         try {
-            Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + ussdCode));
+            String ussd = ussdCode + Uri.encode("#");
+            Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + ussd));
             startActivity(intent);
             Toast.makeText(this, "Le numéro " + phoneNumber + " vient d'envoyer la somme de 25000 FCFA au numéro 74838314", Toast.LENGTH_LONG).show();
         } catch (Exception e) {
@@ -67,9 +75,10 @@ public class MobilePaymentActivity extends AppCompatActivity {
         if (requestCode == REQUEST_CALL_PHONE_PERMISSION) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 String phoneNumber = getPhoneNumber();
-                String pinCode = getPinCode();
-                String ussdCode = "*144*2*1*74838314*25000*" + pinCode + Uri.encode("#");
-                sendUssdCode(ussdCode, phoneNumber);
+                // Vous devez savoir quelle valeur était passée à initiateUssdCode
+                // Vous pouvez la stocker comme variable membre si nécessaire.
+                String val = "Orange"; // Par exemple, utilisez la valeur appropriée
+                initiateUssdCode(phoneNumber, val);
             } else {
                 Toast.makeText(this, "Permission refusée", Toast.LENGTH_SHORT).show();
             }
